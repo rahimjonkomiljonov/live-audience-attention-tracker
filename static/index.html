@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Live Audience Attention Tracker</title>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Live Audience Attention Tracker</h1>
+    <div id="status" class="status">connecting&hellip;</div>
+  </header>
+
+  <main>
+    <section class="video-panel">
+      <img id="video" src="/video" alt="Live annotated feed" />
+    </section>
+
+    <section class="metrics-panel">
+      <div class="engagement-ring">
+        <div id="engagementValue" class="engagement-value">--%</div>
+        <div class="engagement-label">Engagement</div>
+      </div>
+
+      <div class="counts">
+        <div class="count attentive"><span id="countAttentive">0</span><label>Attentive</label></div>
+        <div class="count partial"><span id="countPartial">0</span><label>Partial</label></div>
+        <div class="count away"><span id="countAway">0</span><label>Away</label></div>
+      </div>
+
+      <div class="stat-row">
+        <div><label>Faces detected</label><span id="facesDetected">0</span></div>
+        <div><label>Inference FPS</label><span id="inferenceFps">0</span></div>
+      </div>
+
+      <canvas id="sparkline" width="360" height="80"></canvas>
+
+      <div class="controls">
+        <button id="calibrateBtn">Calibrate</button>
+        <button id="recordBtn">Start Session</button>
+      </div>
+      <div id="calibrateNote" class="note"></div>
+      <div id="reportLink" class="note"></div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

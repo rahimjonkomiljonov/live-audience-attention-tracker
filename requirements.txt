@@ -1,0 +1,6 @@
+mediapipe==1.0.1
+opencv-python==4.14.0.94
+fastapi==0.141.1
+uvicorn[standard]==0.52.4
+numpy>=2.0
+pandas>=2.2
